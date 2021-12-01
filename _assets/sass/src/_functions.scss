@@ -1,0 +1,6 @@
+// Functions
+// Utility mixins and functions for evaluating source code across variables, maps, and mixins.
+
+@function double($size) {
+    @return $size * 2;
+}

@@ -18,10 +18,16 @@
 @import "mixins";
 @import "utilities";
 
-// Layout & components
-body {
-    background-color: #ff00ea;
-    color: $grey;
-    font-size: double(20px);
-    @include base;
-}
+// Theme
+@import "buttons"; // Buttons
+@import "grid"; // Grid
+
+// STM
+@import "stm_mobile__header"; // Mobile Header
+
+// ELEMENTS FOR SITE
+@import "uiux-collection-row"; // "COLLECTION ROW" - Displays three thumbnails in one row.
+
+@import "uiux-profile-header"; // "PROFILE HEADER" - Four column mobile header that mimics instagram's profile header.
+@import "uiux-profile-info"; // "PROFILE INFO" - Below the header, displays text and links
+@import "uiux-profile-buttons"; // "PROFILE BUTTONS" - Buttons used in the profile header.

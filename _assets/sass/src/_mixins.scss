@@ -1,6 +1,181 @@
 // Mixins
 
-@mixin base {
+
+// 
+
+
+@mixin baseReset {
     margin: 0;
     padding: 0;
 }
+
+// GRID  
+@mixin columnSmall {
+
+    .vc_column-inner  {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .wpb_wrapper {
+            .wpb_content_element {
+                margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+// TEXT 
+@mixin uiuxHeadingAlpha {
+    color: #000000 !important;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 10px;
+    padding: 0;
+}
+
+@mixin uiuxHeadingBravo {
+    color: #8C8C8C !important;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    padding: 0 0 5px;
+    border-bottom: 1px solid #8C8C8C;
+    margin: 0 0 5px 0;
+}
+
+@mixin uiuxHeadingCharlie {
+    color: #000000 !important;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: normal;
+    padding: 0;
+}
+
+// "ITEM" used in the mobile header 
+@mixin item {
+    .item {
+        text-align: center;
+        
+        h3 {
+            @include baseReset;
+            padding-top: 15px;
+        }
+        p {
+            @include baseReset;
+            font-size: 14px;
+        }
+
+        .profile-img {
+            // Added to enforce the overflow: hidden.
+            -moz-backface-visibility: hidden;
+            -moz-transform: translate3d(0, 0, 0);
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translate3d(0, 0, 0);
+
+            // Define's the border, radius, etc.
+            border-radius: 100px;
+            height: 100px;
+            // border-color: #FF8E00;
+            // border-width: 3px;
+            // border-style: solid;
+            overflow: hidden;
+            width: 100px;
+
+            // ANiMATE THE BORDER
+            &:before {
+                -moz-animation: profileBorderBefore 4s linear forwards;
+                -ms-animation: profileBorderBefore 4s linear forwards;
+                -webkit-animation: profileBorderBefore 4s linear forwards;
+
+                animation: profileBorderBefore 4s linear forwards;
+                background-color: transparent;
+                border: 2px solid transparent;
+                border-radius: 100px;
+                content: '';
+                height: 0;
+                left: 0px;
+                position: absolute;
+                top: 0px;
+                width: 0;
+                z-index: 100;
+            }
+
+            &:after {
+                -moz-animation: profileBorderAfter 4s linear forwards;
+                -ms-animation: profileBorderAfter 4s linear forwards;
+                -webkit-animation: profileBorderAfter 4s linear forwards;
+
+                animation: profileBorderAfter 4s linear forwards;
+                background-color: transparent;
+                border: 2px solid transparent;
+                border-radius: 100px;
+                content: '';
+                height: 0;
+                left: 0px;
+                position: absolute;
+                top: 0px;
+                width: 0;
+                z-index: 100;
+            }
+        }
+
+    }
+}
+
+
+@-webkit-keyframes profileBorderBefore {
+    0%{ 
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: rgb(255, 0, 255);
+        height: 0;
+        width: 0;
+    }
+    50%{ 
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: rgb(255, 0, 255);
+        border-top-color: rgb(255, 0, 255);
+        height: 0;
+        width: 100%;
+    }
+    100%{ 
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-right-color: rgb(255, 0, 255);
+        border-top-color: rgb(255, 0, 255);
+        height: 100%;
+        width: 100%;
+    }
+}
+    
+@-webkit-keyframes profileBorderAfter {
+    0%{ 
+        border-bottom-color: transparent;
+        border-left-color: rgb(255, 0, 255);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        height: 0;
+        width: 0;
+    }
+    50%{ 
+        border-bottom-color: rgb(255, 0, 255);
+        border-left-color: rgb(255, 0, 255);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        height: 100%;
+        width: 0;
+    }
+    100%{ 
+        border-bottom-color: rgb(255, 0, 255);
+        border-left-color: rgb(255, 0, 255);
+        border-right-color: transparent;
+        border-top-color: transparent;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+
+

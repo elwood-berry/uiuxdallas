@@ -1,0 +1,28 @@
+/*
+UI UX COLLECTION ROW
+class:'uiux-collection-row'
+*/
+
+.uiux-collection-row {
+    display: none;
+}
+
+// TABLET - BREAK POINT
+@media (max-width: 1023px){
+    .uiux-collection-row {
+        background-color: transparent;
+        display: block !important;
+        
+        .vc_column-inner {
+            border: 1px solid #FFF;
+            padding-left: 0;
+            padding-right: 0;
+    
+            .wpb_wrapper {
+                .wpb_content_element {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

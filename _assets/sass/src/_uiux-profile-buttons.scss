@@ -1,0 +1,23 @@
+/*
+UI UX PROFILE BUTTONS
+id: 'uiux-profile-buttons'
+*/
+
+#uiux-profile-buttons {
+    display: none;
+}
+
+// TABLET - BREAK POINT
+@media (max-width: 1023px){
+
+    #uiux-profile-buttons {
+        background-color: #ffffff; // get-color(demo, 'demo-foxtrot'); // background-color: #ffffff;
+        display: block !important;
+        padding: 15px 0;
+    }
+    
+}
+
+/*
+NOTE: In order for this style to display a single row must be given the primary 'id' via WP Bakery.
+*/

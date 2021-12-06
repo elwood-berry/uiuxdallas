@@ -1,0 +1,25 @@
+/*
+UI UX THEME BUTTONS
+*/
+
+.uiux-button,
+.uiux-button:hover,
+.uiux-button:visited,
+.uiux-button:active,
+.uiux-button:focus {
+    background-color: #FFF;
+    border-radius: 3px;
+    border: 1px solid #8C8C8C;
+    color: #282828;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+/*
+NOTE: In order for this style to display a single row must be given the primary 'id' via WP Bakery.
+*/

@@ -1,0 +1,59 @@
+/*
+MOBILE HEADER  
+Prefix: "stm"  
+*/
+
+@media (max-width: 1023px){
+
+    //
+    .stm_mobile__header {
+        background-color: #ffffff !important; // get-color(demo, 'demo-bravo') !important; // background-color: #ffffff;
+        display: block;
+        height: 45px;
+        padding: 0 0 15px !important;
+
+        .container {
+            background-color: transparent;
+            height: 45px;
+
+            .uiux-mobile-header-container {
+                background-color: transparent;
+                height: 45px;
+                position: relative;
+
+                .uiux-button-icon {
+                    background-color: transparent;
+                    color: #000000;
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    text-align: center;
+                    z-index: 1;
+
+                    span {
+                        font-size: 30px;
+                        line-height: 40px;
+                    }
+                }
+            }
+            .stm_flex_nowrap {}
+            .stm_flex_center {}
+            .stm_flex {}
+        }
+    }
+
+    // MOBILE LOGO  
+    .stm_mobile__logo {
+        min-width: 100%;
+
+        a {
+            img {
+                display: block;
+                height: 24px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+
+}
